@@ -1,0 +1,18 @@
+.seccion-heroe { min-height: 90svh; padding: 125px 1.5rem 65px; display: flex; align-items: center; background: radial-gradient(ellipse at 85% 20%, color-mix(in srgb, var(--paleta-suave) 13%, transparent), transparent 60%), var(--color-fondo); }
+.contenedor-heroe { width: 100%; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
+.contenedor-texto { min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+.heroe-etiqueta { color: var(--paleta-suave); text-transform: uppercase; letter-spacing: .18em; font-size: .75rem; font-weight: 700; }
+.contenedor-texto h1 { font-family: var(--fuente-elegante); font-size: clamp(2.6rem, 4.8vw, 4.6rem); font-weight: 400; line-height: 1.07; letter-spacing: -.045em; color: var(--color-blanco); margin: 0; text-wrap: balance; }
+.contenedor-texto h1 em { color: var(--color-secundario); }
+.contenedor-texto p { max-width: 45ch; color: var(--color-texto-suave); line-height: 1.8; font-size: 1rem; }
+.contenedor-boton { display: flex; flex-wrap: wrap; gap: .8rem; }
+.contenedor-boton .boton { flex: 0 1 auto; padding: 1rem 1.4rem; border-radius: 6px; font-size: .75rem; letter-spacing: .06em; }
+.contenedor-boton .boton-secundario { color: var(--color-fondo); }
+.contenedor-boton .boton:hover { transform: translateY(-2px); }
+.heroe-nota { border-top: 1px solid color-mix(in srgb, var(--color-blanco) 20%, transparent); padding-top: 1.25rem; font-size: .8rem; color: var(--color-texto-suave); }
+.heroe-imagen-contenedor { position: relative; min-width: 0; padding: 0 0 1.5rem 1.5rem; }
+.heroe-imagen-contenedor::before { content: ''; position: absolute; inset: 1.5rem 1.5rem 0 0; border: 1px solid var(--paleta-suave); border-radius: 45% 45% 16px 16px; }
+.heroe-imagen { position: relative; display: block; width: 100%; aspect-ratio: 1.1; height: auto; object-fit: cover; border-radius: 45% 45% 16px 16px; }
+.heroe-sello { position: absolute; bottom: 3rem; left: 0; padding: 1rem 1.25rem; background: var(--color-fondo-secundario); color: var(--color-titulos); border-radius: 8px; box-shadow: 0 8px 30px #0002; font-family: var(--fuente-elegante); font-size: 1.1rem; }
+@media (max-width: 840px) { .seccion-heroe { min-height: auto; padding-top: 105px; } .contenedor-texto p { max-width: 60ch; } .heroe-imagen-contenedor { width: 100%; max-width: 560px; justify-self: center; } .heroe-imagen { aspect-ratio: 4 / 3; } }
+@media (max-width: 400px) { .contenedor-boton { flex-direction: column; } .seccion-heroe { padding-inline: 1rem; } .heroe-sello { font-size: .95rem; } }

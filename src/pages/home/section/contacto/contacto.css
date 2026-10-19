@@ -1,46 +1,20 @@
+@import "../../../../styles/variables.css";
 /* =========================================================
    HOJA DE ESTILOS: contacto.css
    Vinculada a variables.css del proyecto escolar
    ========================================================= */
 
 /* Variables de respaldo sincronizadas con la identidad del proyecto escolar */
-:root {
-  --fuente-moderna: 'Open Sans', system-ui, -apple-system, sans-serif;
-  --fuente-elegante: Georgia, serif;
-  --color-primario: #355C5D;
-  --color-principal: #355C5D;
-  --fondo-principal: #355C5D;
-  --color-secundario: #D6A284;
-  --fondo-secundario: #F4EFE6;
-  --color-blanco: #ffffff;
-  --color-negro: #111827;
-  --color-texto: #1f2937;
-}
 
-.fondo-principal,
-#contacto.fondo-principal,
-.seccion-contacto.fondo-principal {
-  background-color: var(--fondo-principal, var(--color-principal, var(--color-primario, #355C5D))) !important;
-  color: var(--color-blanco, #ffffff) !important;
-}
 
-.fondo-secundario,
-#contacto.fondo-secundario,
-.seccion-contacto.fondo-secundario {
-  background-color: var(--fondo-secundario, var(--color-fondo-secundario, var(--color-fondo-claro, #F4EFE6))) !important;
-  color: var(--color-texto, var(--color-negro, #1f2937)) !important;
-}
 
 .seccion-contacto,
 #contacto {
   padding: 5rem 1.5rem;
   font-family: var(--fuente-moderna, system-ui, -apple-system, sans-serif);
   box-sizing: border-box;
-  background-color: var(--fondo-secundario, var(--color-fondo-secundario, var(--color-fondo-claro, #F4EFE6))) !important;
-  color: var(--color-texto, var(--color-negro, #1f2937)) !important;
+ 
 }
-
-
 
 .seccion-contacto *,
 .seccion-contacto *::before,
@@ -68,14 +42,15 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-secundario, #d6a284);
-  background-color: rgba(214, 162, 132, 0.15);
+  color: var(--color-secundario);
+  background-color: color-mix(in srgb, var(--color-secundario) 15%, transparent);
   padding: 0.35rem 0.9rem;
   border-radius: 9999px;
   margin-bottom: 0.85rem;
 }
 
 .contacto-titulo {
+  color: var(--color-titulos);
   font-family: var(--fuente-moderna, inherit);
   font-size: 2.25rem;
   font-weight: 700;
@@ -93,7 +68,7 @@
 
 /* Tarjeta Formulario */
 .tarjeta-formulario-contacto {
-  background-color: var(--color-blanco, #ffffff);
+  background-color: var(--color-superficie);
   border-radius: 12px;
   padding: 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -140,11 +115,11 @@
 .campo-grupo label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-texto, #1f2937);
+  color: var(--color-parrafos);
 }
 
 .fondo-principal .campo-grupo label {
-  color: var(--color-blanco, #ffffff);
+  color: var(--color-texto-sobre-fondo);
 }
 
 .campo-grupo input,
@@ -153,19 +128,19 @@
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   font-family: inherit;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--color-borde);
   border-radius: 8px;
-  background-color: var(--fondo-secundario, #f9f8f5);
-  color: #111827;
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-parrafos);
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
 }
 
 .campo-grupo input:focus,
 .campo-grupo textarea:focus {
-  border-color: var(--color-secundario, #d6a284);
-  box-shadow: 0 0 0 3px rgba(214, 162, 132, 0.25);
-  background-color: #ffffff;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-secundario) 25%, transparent);
+  background-color: var(--color-superficie);
 }
 
 .boton-enviar-contacto {
@@ -177,8 +152,8 @@
   font-size: 1rem;
   font-weight: 700;
   font-family: inherit;
-  color: var(--color-blanco, #ffffff);
-  background-color: var(--color-secundario, #d6a284);
+  color: var(--color-texto-sobre-fondo);
+  background-color: var(--color-secundario);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -223,7 +198,7 @@
   align-items: center;
   gap: 1.15rem;
   padding: 1.15rem 1.4rem;
-  background-color: var(--color-blanco, #ffffff);
+  background-color: var(--color-superficie);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   text-decoration: none;
@@ -234,14 +209,14 @@
 
 .tarjeta-info-item:hover {
   transform: translateY(-2px);
-  border-color: var(--color-secundario, #d6a284);
+  border-color: var(--color-secundario);
   box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.1);
 }
 
 .fondo-principal .tarjeta-info-item {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--color-blanco, #ffffff);
+  color: var(--color-texto-sobre-fondo);
 }
 
 .icono-info {
@@ -252,8 +227,8 @@
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background-color: rgba(214, 162, 132, 0.18);
-  color: var(--color-secundario, #d6a284);
+  background-color: color-mix(in srgb, var(--color-secundario) 18%, transparent);
+  color: var(--color-secundario);
   shrink: 0;
 }
 
@@ -341,7 +316,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-texto-sobre-fondo);
   background-color: #25D366;
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -366,8 +341,8 @@
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  color: var(--color-primario, #2c4c4c);
-  background-color: var(--color-blanco, #ffffff);
+  color: var(--color-primario);
+  background-color: var(--color-superficie);
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -375,13 +350,13 @@
 }
 
 .fondo-principal .boton-telefono {
-  color: #ffffff !important;
+  color: var(--color-texto-sobre-fondo) !important;
   background-color: rgba(255, 255, 255, 0.15) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .boton-telefono:hover {
   transform: translateY(-1px);
-  border-color: var(--color-secundario, #d6a284);
+  border-color: var(--color-secundario);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }

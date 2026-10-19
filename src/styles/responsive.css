@@ -1,0 +1,18 @@
+/* Reglas compartidas, cargadas después de los estilos de cada sección. */
+.cuadricula { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.cuadricula > *, .cuadricula-contacto-2col > *, .fila-formulario > * { min-width: 0; }
+.contenedor-navbar { max-width: 1280px; padding-inline: 1.5rem; }
+.navbar { background-color: var(--color-fondo); }
+.navbar-toggle { min-width: 44px; min-height: 44px; }
+.nav-link-btn, .boton-enviar-contacto { color: var(--color-fondo) !important; }
+.valor-info, .footer-info li { overflow-wrap: anywhere; }
+.informacion-producto { flex-wrap: wrap; }
+.campo-grupo input, .campo-grupo textarea { min-width: 0; }
+:focus-visible { outline: 3px solid var(--color-secundario); outline-offset: 5px; }
+#catalogo .catalogo-contenido { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#catalogo .catalogo-item { grid-column: auto; }
+@media (max-width: 1024px) { #catalogo .catalogo-contenido { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 840px) { .cuadricula { grid-template-columns: minmax(0, 1fr); } .col-span-5, .col-span-7 { grid-column: auto; } .sobre-seccion .contenedor-imagen { aspect-ratio: 4 / 3; } }
+@media (max-width: 768px) { .navbar-menu { height: calc(100dvh - 70px); visibility: hidden; pointer-events: none; } .navbar-menu.active { visibility: visible; pointer-events: auto; } }
+@media (max-width: 640px) { #catalogo .catalogo-contenido { grid-template-columns: minmax(0, 1fr); } .tarjeta-formulario-contacto { padding: 1.25rem; } .tarjeta-info-item { padding: 1rem; } .contenedor-navbar { padding-inline: 1rem; } .sobre-seccion, #contacto, #catalogo { padding: 3rem 1rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }

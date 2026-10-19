@@ -1,7 +1,7 @@
 // =========================================================
 // SCRIPT INTERACTIVO DEL NAVBAR (Menú móvil responsive y scroll)
 // =========================================================
-document.addEventListener('DOMContentLoaded', () => {
+(function(callback) { callback.call(document, new Event('DOMContentLoaded')); })( () => {
   const navbar = document.getElementById('barra-navegacion') || document.querySelector('.navbar');
   const toggleBtn = document.getElementById('navbar-toggle') || document.querySelector('.navbar-toggle');
   const menu = document.querySelector('.navbar-menu');
@@ -9,17 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Control del menú desplegable móvil
   if (toggleBtn && menu) {
+    const closeMenu = () => {
+      menu.classList.remove('active');
+      toggleBtn.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-label', 'Abrir menú');
+      document.body.style.overflow = '';
+    };
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.classList.contains('active')) {
+        closeMenu();
+        toggleBtn.focus();
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMenu();
+    });
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = menu.classList.toggle('active');
       toggleBtn.classList.toggle('active');
       toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Cerrar el menú móvil al hacer clic en cualquier enlace
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
+        closeMenu();
         menu.classList.remove('active');
         toggleBtn.classList.remove('active');
         toggleBtn.setAttribute('aria-expanded', 'false');
@@ -30,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cerrar el menú si se hace clic fuera del menú
     document.addEventListener('click', (e) => {
       if (menu.classList.contains('active') && !menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeMenu();
         menu.classList.remove('active');
         toggleBtn.classList.remove('active');
         toggleBtn.setAttribute('aria-expanded', 'false');
@@ -51,3 +70,4 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); // Ejecución inicial
   }
 });
+

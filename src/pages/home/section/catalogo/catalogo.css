@@ -1,3 +1,4 @@
+@import "../../../../styles/variables.css";
 /* =========================================================
    catalogo.css - Hoja de Estilos de la Sección Catálogo
    ========================================================= */
@@ -8,20 +9,7 @@
 #catalogo {
   padding: 5rem 1.5rem;
   box-sizing: border-box;
-  background-color: var(--fondo-principal, var(--color-principal, var(--color-primario, #355C5D)));
-  color: var(--color-blanco, #ffffff);
-}
 
-.fondo-principal,
-#catalogo.fondo-principal {
-  background-color: var(--fondo-principal, var(--color-principal, var(--color-primario, #355C5D)));
-  color: var(--color-blanco, #ffffff);
-}
-
-
-#catalogo.fondo-secundario {
-  background-color: var(--fondo-secundario, #F4EFE6);
-  color: #1f2937;
 }
 
 .catalogo-header {
@@ -50,7 +38,7 @@ section#catalogo .catalogo-header h2 {
   font-size: 2.25rem !important;
   font-weight: 700 !important;
   margin: 0 !important;
-  color: #ffd500 !important;
+  color: var(--color-secundario) !important;
 }
 
 .catalogo-contenido,
@@ -80,7 +68,7 @@ section#catalogo .catalogo-header h2 {
   width: 100%;
   aspect-ratio: 1 / 1;         /* Forza a que el contenedor sea un cuadrado perfecto */
   overflow: hidden;            /* Recorta cualquier parte de la imagen que se salga */
-  background-color: rgba(45, 42, 38, 0.4); /* Fondo oscuro con opacidad */
+  background-color: color-mix(in srgb, var(--color-fondo) 40%, transparent); /* Fondo oscuro con opacidad */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   margin: 0;
   
@@ -120,7 +108,7 @@ section#catalogo .catalogo-header h2 {
   font-style: italic !important;
   font-size: 1.125rem !important; /* text-lg (18px) */
   margin: 0 !important;
-  color: #ffc800 !important;
+  color: var(--color-secundario) !important;
   font-weight: 600 !important;
 }
 
@@ -138,7 +126,7 @@ section#catalogo .catalogo-header h2 {
   /* font-serif */
   font-size: 0.875rem !important;         /* text-sm (14px) */
   font-weight: 500 !important;            /* font-medium */
-  color: #fb7f3c !important;              /* text-gold-muted (dorado suave) */
+  color: var(--color-secundario) !important;              /* text-gold-muted (dorado suave) */
   white-space: nowrap !important;
 }
 
@@ -149,7 +137,7 @@ section#catalogo .catalogo-header h2 {
   font-weight: 400 !important;                /* font-normal */
   line-height: 1.625 !important;              /* leading-relaxed */
   margin-bottom: 16px !important;             /* mb-6 (6 x 4px = 24px) */
-  color: #f1f5f9 !important;
+  color: var(--color-texto-sobre-fondo) !important;
 
   display: -webkit-box !important;
   -webkit-line-clamp: 4 !important;           /* Limita el texto a un máximo de líneas */
@@ -165,7 +153,7 @@ section#catalogo .catalogo-header h2 {
 
 .precio .precio-label {
   font-size: 0.75rem !important;
-  color: #94a3b8 !important;
+  color: var(--color-texto-suave) !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
@@ -178,8 +166,8 @@ section#catalogo .catalogo-header h2 {
 
 .boton-catalogo {
   display: inline-block;
-  background: var(--color-secundario, #d6a284);
-  color: #0d1117;
+  background: var(--color-secundario);
+  color: var(--color-fondo);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.85rem;

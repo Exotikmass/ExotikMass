@@ -1,0 +1,23 @@
+[
+  {
+    "id": "chocobomba-1",
+    "nombre": "ChocoBomba",
+    "imagen": "imagenes/chocobomba.jpg",
+    "precio": "$ 12.000",
+    "descripcion": "Bizcocho esponjoso bañado en cobertura de chocolate y relleno de manjar blanco, moldeado con un diseño divertido y único que sorprende desde el primer vista"
+  },
+  {
+    "id": "rollos-de-canela-2",
+    "nombre": "Rollos de Canela",
+    "imagen": "imagenes/rollos-de-canela.jpg",
+    "precio": "$ 7.500",
+    "descripcion": "Suaves  rollos artesanalmente horneados con especias exóticas y glaseado cremoso de queso crema, perfectos para compartir o dejarle un detalle inolvidable a alguien especia"
+  },
+  {
+    "id": "caja-alquimia-de-sabores-3",
+    "nombre": "Caja \"Alquimia de Sabores\"",
+    "imagen": "imagenes/caja-alquimia-de-sabores.jpg",
+    "precio": "$ 45.000",
+    "descripcion": "Una colección de seis mini-panes s de edición limitada. Incluye versiones en miniatura de nuestra ChocoBomba, una Tartaleta Esmeralda, un mini-volcán de chocolate amargo, y tres creaciones sorpresa que fusionan frutas exóticas y especias. Perfecta para probar la esencia de Exotik Mass."
+  }
+]

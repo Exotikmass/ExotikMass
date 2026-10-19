@@ -1,0 +1,38 @@
+.pagina-paletas { background: var(--color-fondo-secundario); color: var(--color-parrafos); }
+.paletas-nav, .pagina-paletas main, .paletas-footer { max-width: 1280px; margin: auto; padding-inline: clamp(1rem, 4vw, 3rem); }
+.paletas-nav { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--color-borde); }
+.paletas-nav a, .paletas-footer a { color: var(--color-primario); text-decoration: none; font-size: .85rem; }
+.paletas-nav .marca { font-family: var(--fuente-elegante); font-size: 1.5rem; font-weight: bold; }
+.marca span { display: block; font: .65rem var(--fuente-moderna); letter-spacing: .12em; text-transform: uppercase; margin-top: .4rem; }
+.paletas-intro { padding-block: clamp(3rem, 7vw, 6rem); max-width: 780px; }
+.eyebrow { font-size: .7rem; text-transform: uppercase; letter-spacing: .13em; color: var(--color-primario); font-weight: 700; }
+.paletas-intro h1 { font: 400 clamp(2.4rem, 5vw, 4.5rem)/1.08 var(--fuente-elegante); letter-spacing: -.04em; margin-block: 1.25rem; color: var(--color-titulos); }
+.paletas-intro p { max-width: 62ch; font-size: 1rem; line-height: 1.8; }
+.paletas-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.paleta-card { min-width: 0; background: var(--color-fondo-secundario); border: 1px solid var(--color-borde); border-radius: 16px; overflow: hidden; }
+.paleta-preview { background: var(--color-fondo); color: var(--color-blanco); padding: 1.75rem 1.75rem 0; }
+.preview-marca { display: block; font-family: var(--fuente-elegante); font-size: 1rem; padding-bottom: 1.25rem; border-bottom: 1px solid color-mix(in srgb, var(--color-blanco) 20%, transparent); }
+.preview-content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1rem; align-items: center; padding-block: 2rem; }
+.preview-label { display: block; color: var(--paleta-suave); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
+.preview-content h2 { font: 400 clamp(1.65rem, 2.5vw, 2.3rem)/1.13 var(--fuente-elegante); margin: .8rem 0 1.3rem; }
+.preview-content img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50% 50% 8px 8px; }
+.preview-boton { display: inline-block; background: var(--color-secundario); color: var(--color-fondo); padding: .75rem .85rem; border-radius: 4px; font-size: .7rem; text-decoration: none; font-weight: 700; }
+.preview-papel { background: var(--color-fondo-secundario); color: var(--color-parrafos); padding: 1.25rem; border-top: 4px solid var(--paleta-suave); border-radius: 8px 8px 0 0; }
+.preview-papel strong { font: 400 1.2rem var(--fuente-elegante); color: var(--color-titulos); }
+.preview-papel p { font-size: .8rem; line-height: 1.6; margin-top: .4rem; }
+.paleta-info { padding: 1.75rem; }
+.paleta-info h3 { font: 400 2rem var(--fuente-elegante); color: var(--color-titulos); margin-block: .5rem .75rem; }
+.paleta-info > p { font-size: .9rem; line-height: 1.75; min-height: 5.3em; }
+.paleta-colores { margin-block: 1.5rem; display: grid; gap: .6rem; }
+.color-fila { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: .72rem; }
+.color-fila dt { display: flex; align-items: center; gap: .65rem; overflow-wrap: anywhere; min-width: 0; }
+.color-fila dd { font-family: monospace; flex-shrink: 0; }
+.color-muestra { width: 25px; height: 25px; flex-shrink: 0; border-radius: 50%; border: 1px solid #0002; }
+details { border-top: 1px solid var(--color-borde); padding-top: 1rem; }
+summary { cursor: pointer; color: var(--color-primario); font-size: .85rem; font-weight: 600; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .75rem; line-height: 1.8; margin-top: 1rem; padding: 1rem; background: var(--color-superficie); border-radius: 6px; }
+.paletas-nota { max-width: 70ch; margin-block: 2rem 4rem; font-size: .85rem; line-height: 1.7; }
+.paletas-footer { border-top: 1px solid var(--color-borde); padding-block: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .8rem; }
+:focus-visible { outline: 3px solid var(--color-primario); outline-offset: 4px; }
+@media (max-width: 900px) { .paletas-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .paleta-preview, .paleta-info { padding-inline: 1rem; } .preview-content { grid-template-columns: minmax(0, 1fr); } .preview-content img { max-height: 200px; aspect-ratio: 4 / 3; } .paletas-nav .marca { font-size: 1.2rem; } }

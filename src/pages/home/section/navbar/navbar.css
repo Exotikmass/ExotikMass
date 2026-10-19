@@ -1,3 +1,4 @@
+@import "../../../../styles/variables.css";
 /* =========================================================
    ESTILOS DE LA BARRA DE NAVEGACIÓN (navbar.css)
    ========================================================= */
@@ -26,7 +27,7 @@ html {
 
 /* Estado cuando el usuario hace scroll hacia abajo pasando el Hero */
 .navbar.navbar-scrolled {
-  background-color: #0f172a !important;
+  background-color: var(--color-fondo) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.15);
@@ -47,7 +48,7 @@ html {
   font-size: 1.25rem;
   font-weight: 700;
   font-family: var(--fuente-moderna, sans-serif);
-  color: #ffffff;
+  color: var(--color-texto-sobre-fondo);
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: opacity 0.25s ease;
@@ -68,7 +69,7 @@ html {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: color-mix(in srgb, var(--color-texto-sobre-fondo) 90%, transparent);
   text-decoration: none;
   font-size: 0.925rem;
   font-weight: 500;
@@ -78,7 +79,7 @@ html {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--color-texto-sobre-fondo);
 }
 
 /* Línea animada sutil bajo los enlaces */
@@ -89,7 +90,7 @@ html {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #D6A284;
+  background-color: var(--color-secundario);
   transition: width 0.3s ease;
 }
 
@@ -99,8 +100,8 @@ html {
 
 /* Enlace estilo botón de acción (opcional) */
 .nav-link-btn {
-  background-color: #D6A284;
-  color: #ffffff !important;
+  background-color: var(--color-secundario);
+  color: var(--color-texto-sobre-fondo) !important;
   padding: 0.45rem 1.15rem !important;
   border-radius: 9999px;
   font-weight: 600;
@@ -141,7 +142,7 @@ html {
   display: block;
   width: 24px;
   height: 2.5px;
-  background-color: #ffffff;
+  background-color: var(--color-texto-sobre-fondo);
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -176,7 +177,7 @@ html {
     left: 0;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: #0f172a;
+    background-color: var(--color-fondo);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
